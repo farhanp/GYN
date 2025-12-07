@@ -9,9 +9,6 @@ body {
 body {
   background-color: #1e1e1e;
   color: #ffff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   height: 100svh;
   font-family: "Press Start 2P", system-ui;
   line-height: 1.5;
@@ -22,13 +19,47 @@ button {
   line-height: 1.8;
 }
 
-.container {
-  max-width: 1080px;
+.main-container {
+  display: flex;
+  flex-direction: column;
+  height: 100svh;
+  justify-content: space-between;
+}
+
+.gyn-container {
+  /* max-width: 1200px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100svh - 68px);
+}
+
+/* header */
+
+.gyn-header {
+  background-color: #bd6d6d;
+  color: #fff4f0;
+  padding: 16px 24px;
+  font-size: 24px;
+  font-weight: bold;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.gyn-footer {
+  background-color: #bd6d6d;
+  color: #fff4f0;
+  padding: 12px 24px;
+  font-size: 14px;
+  text-align: center;
+  box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .gyn-wrapper {
   padding: 10px;
-  max-width: 700px;
+  max-width: calc(700px - 115px);
 }
 
 .gym-box-wrapper {
@@ -132,7 +163,7 @@ dialog::backdrop {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  width: 220px;
+  width: 180px;
   height: 150px;
   color: #333;
   font-size: 60px;
@@ -243,9 +274,10 @@ button {
 }
 
 /* Mobile Design */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .gyn-wrapper {
     padding: 32px;
+    max-width: calc(700px - 150px);
   }
 
   .gyn-title {
@@ -323,8 +355,5 @@ button {
 
   .gyn-boxes {
     gap: 16px;
-  }
-
-  .gyn-lock-your-number {
   }
 }

@@ -14,76 +14,93 @@
     <script src="gyn.js" defer></script>
   </head>
   <body>
-    <div class="container">
-      <div class="gyn-wrapper">
-        <h1 class="gyn-title"># Number Guess</h1>
-        <div class="gym-box-wrapper">
-          <div class="gyn-boxes">
-            <div class="gyn-box"><span>?</span></div>
-            <div class="gyn-box"><span>?</span></div>
-            <div class="gyn-box"><span>?</span></div>
-            <div class="gyn-box"><span>?</span></div>
-            <div class="gyn-box"><span>?</span></div>
-            <div class="gyn-box"><span>?</span></div>
-            <div class="gyn-box"><span>?</span></div>
-            <div class="gyn-box"><span>?</span></div>
-            <div class="gyn-box"><span>?</span></div>
-          </div>
-          <div class="gyn-lock-your-number">
-            <button class="gyn-lock-btn">
-              Click here to lock your guessing number
-            </button>
-          </div>
-        </div>
-        <!-- Lock the guessing number dialogue -->
-        <dialog class="gyn-dialog">
-          <div class="gyn-input">
-            <span>Guess your next number: 1 - 9</span>
-            <div class="gyn-lock-wrapper">
-              <input
-                class="gyn-number"
-                name="number"
-                type="number"
-                aria-label="number"
-              />
-              <button role="button" disabled class="gyn-lock" type="button">
-                Lock
+    <div class="main-container">
+      <div class="header-wrapper">
+        <header class="gyn-header">
+          <span>Game</span>
+          <i class="fas fa-gamepad" style="color: gold; font-size: 24px"></i>
+        </header>
+      </div>
+      <div class="gyn-container">
+        <div class="gyn-wrapper">
+          <h1 class="gyn-title"># Number Guess</h1>
+          <div class="gym-box-wrapper">
+            <div class="gyn-boxes">
+              <div class="gyn-box"><span>?</span></div>
+              <div class="gyn-box"><span>?</span></div>
+              <div class="gyn-box"><span>?</span></div>
+              <div class="gyn-box"><span>?</span></div>
+              <div class="gyn-box"><span>?</span></div>
+              <div class="gyn-box"><span>?</span></div>
+              <div class="gyn-box"><span>?</span></div>
+              <div class="gyn-box"><span>?</span></div>
+              <div class="gyn-box"><span>?</span></div>
+            </div>
+            <div class="gyn-lock-your-number">
+              <button class="gyn-lock-btn">
+                Click here to lock your guessing number
               </button>
             </div>
           </div>
-        </dialog>
+          <!-- Lock the guessing number dialogue -->
+          <dialog class="gyn-dialog">
+            <div class="gyn-input">
+              <span>Guess your next number: 1 - 9</span>
+              <div class="gyn-lock-wrapper">
+                <input
+                  class="gyn-number"
+                  name="number"
+                  type="number"
+                  aria-label="number"
+                />
+                <button role="button" disabled class="gyn-lock" type="button">
+                  Lock
+                </button>
+              </div>
+            </div>
+          </dialog>
 
-        <!-- Winner Dialog -->
-        <dialog class="gyn-dialog gyn-dialog-win">
-          <div class="gyn-winner">
-            <h1>Congratulations!</h1>
-            <i class="fas fa-trophy" style="color: gold; font-size: 80px"></i>
-            <span>You have guessed it correctly.</span>
-            <button role="button" class="gyn-continue" type="button">
-              Continue
-            </button>
-            <button role="button" class="gyn-reset" type="button">Reset</button>
+          <!-- Winner Dialog -->
+          <dialog class="gyn-dialog gyn-dialog-win">
+            <div class="gyn-winner">
+              <h1>Congratulations!</h1>
+              <i class="fas fa-trophy" style="color: gold; font-size: 80px"></i>
+              <span>You have guessed it correctly.</span>
+              <button role="button" class="gyn-continue" type="button">
+                Continue
+              </button>
+              <button role="button" class="gyn-reset" type="button">
+                Reset
+              </button>
+            </div>
+          </dialog>
+
+          <!-- Failed Dialog -->
+          <dialog class="gyn-dialog gyn-dialog-lose">
+            <div class="gyn-loser">
+              <h1>You have lost!</h1>
+              <i
+                class="fas fa-thumbs-down"
+                style="color: #ff4545; font-size: 80px"
+              ></i>
+
+              <button role="button" class="gyn-try-again" type="button">
+                Try Again
+              </button>
+            </div>
+          </dialog>
+          <div class="gyn-results">
+            <div class="gyn-highest-streak">Highest Streak: <span>0</span></div>
+            <div class="gyn-attempts-score">Attempts: <span>3</span></div>
           </div>
-        </dialog>
-
-        <!-- Failed Dialog -->
-        <dialog class="gyn-dialog gyn-dialog-lose">
-          <div class="gyn-loser">
-            <h1>You have lost!</h1>
-            <i
-              class="fas fa-thumbs-down"
-              style="color: #ff4545; font-size: 80px"
-            ></i>
-
-            <button role="button" class="gyn-try-again" type="button">
-              Try Again
-            </button>
-          </div>
-        </dialog>
-        <div class="gyn-results">
-          <div class="gyn-highest-streak">Highest Streak: <span>0</span></div>
-          <div class="gyn-attempts-score">Attempts: <span>3</span></div>
         </div>
+      </div>
+      <div class="footer-wrapper">
+        <footer class="gyn-footer">
+          <span
+            >Made with <span style="font-size: 20px">&hearts;</span> by </span
+          ><span style="color: gold">Farhan</span>
+        </footer>
       </div>
     </div>
     <link
