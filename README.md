@@ -65,5 +65,3 @@ Simply open `index.html` in your web browser and start playing!
 
 ```bash
 # No installation needed - just open [index.html](http://_vscodecontentref_/0)
-# Or serve with a local server:
-python -m http.server 8000
